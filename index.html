@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<aside>
+
+  <img src="./рамка.jpg" width="500px" height="500px" alt="">
+  <img src="./рамка.jpg" width="500px" height="500px" alt="">
+  
+  </aside>
+  <button onclick="typeWriter()">ЖМИ &#10084</button>
+
+  <p id="demo"></p>
+
+  <script>
+    var i = 0;
+    var   txt = 'Мой добрый ангел, дорожу каждым твоим взглядом, каждым словом и каждым прикосновением. Ты для меня, как планета с волшебными океанами и яркой сказочной сушей, которые дарят мне бездну сокровищ и притягивают своей красотой и щедростью. Люблю тебя безоговорочно и навсегда';
+    var speed = 100;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
